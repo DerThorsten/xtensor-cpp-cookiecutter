@@ -39,7 +39,7 @@ file(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
 list(REMOVE_ITEM files "{{ cookiecutter.package_name }}")
 
 # test executable
-add_executable(test_{{ cookiecutter.package_name }} {{ cookiecutter.package_name }}.cpp ${files})
+add_executable(test_{{ cookiecutter.package_name }} test_{{ cookiecutter.package_name }}.cpp ${files})
 
 # declare the executable as test
 add_test(NAME test_{{ cookiecutter.package_name }} COMMAND test_{{ cookiecutter.package_name }})
